@@ -1,0 +1,111 @@
+@import 'tailwindcss';
+@import '@fontsource-variable/inter';
+@import '@fontsource-variable/jetbrains-mono';
+
+@theme {
+  --font-sans: 'Inter Variable', ui-sans-serif, system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono Variable', ui-monospace, monospace;
+  --color-ink-950: #04060b;
+  --color-ink-900: #070a12;
+  --color-ink-850: #0a0e18;
+  --color-ink-800: #0e1320;
+  --color-ink-700: #161d2e;
+  --color-accent: #fb923c;
+  --color-accent-soft: #fdba74;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+  background: var(--color-ink-950);
+  color: #e2e8f0;
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  overflow: hidden;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(148, 163, 184, 0.25) transparent;
+}
+
+/* Range input */
+input[type='range'].slider {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 18px;
+  background: transparent;
+  cursor: pointer;
+}
+input[type='range'].slider::-webkit-slider-runnable-track {
+  height: 3px;
+  border-radius: 3px;
+  background: linear-gradient(90deg, var(--color-accent) var(--fill, 50%), rgba(148, 163, 184, 0.22) var(--fill, 50%));
+}
+input[type='range'].slider::-moz-range-track {
+  height: 3px;
+  border-radius: 3px;
+  background: rgba(148, 163, 184, 0.22);
+}
+input[type='range'].slider::-moz-range-progress {
+  height: 3px;
+  border-radius: 3px;
+  background: var(--color-accent);
+}
+input[type='range'].slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 13px;
+  height: 13px;
+  margin-top: -5px;
+  border-radius: 50%;
+  background: #fff7ed;
+  border: 2px solid var(--color-accent);
+  box-shadow: 0 0 0 3px rgba(251, 146, 60, 0.15);
+}
+input[type='range'].slider::-moz-range-thumb {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: #fff7ed;
+  border: 2px solid var(--color-accent);
+}
+
+.panel-glass {
+  background: linear-gradient(180deg, rgba(14, 19, 32, 0.92), rgba(9, 12, 21, 0.92));
+  backdrop-filter: blur(10px);
+}
+
+.kbd {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  padding: 1px 5px;
+  border-radius: 4px;
+  border: 1px solid rgba(148, 163, 184, 0.25);
+  color: #94a3b8;
+}
+
+.prose-science h3 {
+  margin-top: 1.25rem;
+  margin-bottom: 0.4rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #f8fafc;
+}
+.prose-science p,
+.prose-science li {
+  font-size: 0.85rem;
+  line-height: 1.6;
+  color: #cbd5e1;
+}
+.prose-science ul {
+  list-style: disc;
+  padding-left: 1.2rem;
+}
+.prose-science code {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: #fdba74;
+}
